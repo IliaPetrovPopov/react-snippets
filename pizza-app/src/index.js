@@ -175,8 +175,8 @@ function Order({ closeHour, openHour }) {
 
 // React v18
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-root.render(
+// root.render(
+// root.render(
 root.render(
   <React.StrictMode>
     <App />
