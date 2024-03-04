@@ -50,36 +50,27 @@ function CreateOrder() {
       <Form method="POST">
         <div className="">
           <label className="">First Name</label>
-          <input className="" type="text" name="customer" required />
+          <input className="input" type="text" name="customer" required />
         </div>
 
         <div className="">
           <label className="">Phone number</label>
           <div className="grow">
-            <input className="" type="tel" name="phone" required />
-            {formErrors?.phone && (
-              <p className="">
-                {formErrors.phone}
-              </p>
-            )}
+            <input className="input" type="tel" name="phone" required />
+            {formErrors?.phone && <p className="">{formErrors.phone}</p>}
           </div>
         </div>
 
         <div className="">
           <label className="sm:basis-40">Address</label>
           <div className="grow">
-            <input
-              className="input w-full"
-              type="text"
-              name="address"
-              required
-            />
+            <input className="input" type="text" name="address" required />
           </div>
         </div>
 
         <div className="">
           <input
-            className=""
+            className="h-4 w-4 accent-yellow-400 focus:outline-none focus:ring focus:ring-yellow-400 focus:ring-offset-2"
             type="checkbox"
             name="priority"
             id="priority"
@@ -87,14 +78,14 @@ function CreateOrder() {
             // onChange={(e) => setWithPriority(e.target.checked)}
           />
           <label htmlFor="priority" className="font-medium">
-            Want to yo give your order priority?
+            Want to give your order priority?
           </label>
         </div>
 
         <div>
           <input type="hidden" name="cart" value={JSON.stringify(cart)} />
           <Button disabled={isSubmitting} type="primary">
-            {isSubmitting ? 'Placing order....' : 'Order now'}
+          {isSubmitting ? 'Placing order....' : 'Order now'}
           </Button>
         </div>
       </Form>
