@@ -16,7 +16,7 @@
     background-size: 20% 50%;
     animation: loading 1s infinite linear;
   }
-
+  
   @keyframes loading {
     20% {
       background-position: 0% 0%, 50% 50%, 100% 50%;
